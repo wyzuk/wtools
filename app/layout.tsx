@@ -26,17 +26,10 @@ const themeScript = `
   (function() {
     try {
       var stored = localStorage.getItem('wtools_theme');
-      if (stored === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else if (stored === 'dark') {
+      if (stored === 'dark') {
         document.documentElement.classList.add('dark');
       } else {
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (prefersDark) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
+        document.documentElement.classList.remove('dark');
       }
     } catch (e) {}
   })();
@@ -52,7 +45,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="min-h-screen bg-[#f8fafc] dark:bg-black text-slate-900 dark:text-white flex flex-col antialiased selection:bg-blue-500 selection:text-white">
+      <body suppressHydrationWarning className="min-h-screen bg-[#f5f5f7] dark:bg-[#121214] text-[#1d1d1f] dark:text-[#f5f5f7] flex flex-col antialiased selection:bg-[#0071e3] selection:text-white font-sans">
         <ThemeProvider>
           <UsageProvider>
             <Navbar />

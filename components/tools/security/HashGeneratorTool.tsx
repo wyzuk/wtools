@@ -221,7 +221,7 @@ export function HashGeneratorTool() {
     <div className="space-y-6">
       {limitReached && <UsageLimitBanner />}
 
-      <div className="p-6 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl space-y-4 shadow-sm dark:shadow-none transition-colors">
+      <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-2xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.05)] transition-colors">
         <label htmlFor="hash-input" className="block text-xs font-semibold text-slate-700 dark:text-white/70 uppercase tracking-wider font-mono">
           Input Text / String to Hash
         </label>
@@ -242,7 +242,7 @@ export function HashGeneratorTool() {
             type="button"
             onClick={handleGenerate}
             disabled={limitReached}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-blue-500 hover:bg-blue-600 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-[#0071e3] hover:bg-[#0077ed] active:scale-95 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm"
           >
             <KeyRound className="w-4 h-4" />
             <span>Generate hashes</span>

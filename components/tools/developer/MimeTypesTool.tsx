@@ -50,7 +50,7 @@ export function MimeTypesTool() {
 
   return (
     <div className="space-y-6">
-      <div className="p-6 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl space-y-3 shadow-sm dark:shadow-none transition-colors">
+      <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl space-y-3 shadow-sm dark:shadow-none transition-colors">
         <label htmlFor="mime-search" className="block text-xs font-semibold text-slate-700 dark:text-white/70 uppercase tracking-wider font-mono">
           Search MIME Types or Extensions
         </label>
@@ -82,7 +82,7 @@ export function MimeTypesTool() {
             <tbody className="divide-y divide-slate-100 dark:divide-white/5">
               {filtered.map((item) => (
                 <tr key={item.ext} className="hover:bg-slate-50 dark:hover:bg-white/5">
-                  <td className="py-2.5 pr-4 text-blue-600 dark:text-blue-400 font-bold">{item.ext}</td>
+                  <td className="py-2.5 pr-4 text-[#0071e3] dark:text-blue-400 font-bold">{item.ext}</td>
                   <td className="py-2.5 px-4 text-slate-900 dark:text-white">{item.type}</td>
                   <td className="py-2.5 px-4 text-slate-500 dark:text-white/60">{item.category}</td>
                   <td className="py-2.5 px-4 text-slate-400 dark:text-white/40">{item.rfc || "IANA"}</td>

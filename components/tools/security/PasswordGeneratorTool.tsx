@@ -63,14 +63,14 @@ export function PasswordGeneratorTool() {
       {limitReached && <UsageLimitBanner />}
 
       {/* Generated Display */}
-      <div className="p-6 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl space-y-4 shadow-sm dark:shadow-none transition-colors">
+      <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-2xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.05)] transition-colors">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="w-full">
             <span className="text-xs font-semibold text-slate-700 dark:text-white/70 uppercase tracking-wider font-mono block mb-2">
               Cryptographically Secure Password
             </span>
             <div className="p-4 bg-slate-50 dark:bg-black border border-slate-200 dark:border-white/15 rounded-lg font-mono text-base sm:text-lg text-slate-900 dark:text-white font-bold break-all flex items-center justify-between gap-3">
-              <span className="text-blue-600 dark:text-blue-400">{password}</span>
+              <span className="text-[#0071e3] dark:text-blue-400">{password}</span>
               <CopyButton text={password} label="Copy" />
             </div>
           </div>
@@ -89,7 +89,7 @@ export function PasswordGeneratorTool() {
             type="button"
             disabled={limitReached}
             onClick={handleRegenerate}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-[#0071e3] hover:bg-[#0077ed] active:scale-95 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm"
           >
             <RefreshCw className="w-4 h-4" />
             <span>Generate new</span>
@@ -98,11 +98,11 @@ export function PasswordGeneratorTool() {
       </div>
 
       {/* Controls */}
-      <div className="p-6 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl space-y-5 shadow-sm dark:shadow-none transition-colors">
+      <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl space-y-5 shadow-sm dark:shadow-none transition-colors">
         <div>
           <div className="flex items-center justify-between mb-2">
             <label htmlFor="length-range" className="text-xs font-semibold text-slate-700 dark:text-white/70 uppercase tracking-wider font-mono">
-              Password Length: <span className="text-blue-600 dark:text-blue-400 font-bold">{length} characters</span>
+              Password Length: <span className="text-[#0071e3] dark:text-blue-400 font-bold">{length} characters</span>
             </label>
           </div>
           <input

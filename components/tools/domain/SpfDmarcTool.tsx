@@ -43,7 +43,7 @@ export function SpfDmarcTool() {
 
       if (Array.isArray(spfJson.answers)) {
         for (const ans of spfJson.answers) {
-          const text = ans.data.replace(/^"|"$/g, "");
+          const text = String(ans?.data || "").replace(/^"|"$/g, "");
           if (text.startsWith("v=spf1")) {
             spfRecord = text;
             if (text.includes("-all")) spfPolicy = "Hard Fail (-all) - Strict Enforcement";
@@ -61,7 +61,7 @@ export function SpfDmarcTool() {
 
       if (Array.isArray(dmarcJson.answers)) {
         for (const ans of dmarcJson.answers) {
-          const text = ans.data.replace(/^"|"$/g, "");
+          const text = String(ans?.data || "").replace(/^"|"$/g, "");
           if (text.startsWith("v=DMARC1")) {
             dmarcRecord = text;
             const pMatch = text.match(/p=([^;\s]+)/i);
@@ -109,7 +109,7 @@ export function SpfDmarcTool() {
     <div className="space-y-6">
       {limitReached && <UsageLimitBanner />}
 
-      <form onSubmit={handleSubmit} className="p-6 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl space-y-4 shadow-sm dark:shadow-none transition-colors">
+      <form onSubmit={handleSubmit} className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-2xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.05)] transition-colors">
         <div>
           <label htmlFor="email-domain" className="block text-xs font-semibold text-slate-700 dark:text-white/70 mb-2 uppercase tracking-wider font-mono">
             Domain Name to Inspect
@@ -127,7 +127,7 @@ export function SpfDmarcTool() {
             <button
               type="submit"
               disabled={loading || limitReached}
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-blue-500 hover:bg-blue-600 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm shrink-0"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-[#0071e3] hover:bg-[#0077ed] active:scale-95 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm shrink-0"
             >
               {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />}
               <span>{loading ? "Inspecting..." : "Check SPF & DMARC"}</span>
@@ -146,7 +146,7 @@ export function SpfDmarcTool() {
                 setDomain(preset);
                 analyzeEmailAuth(preset);
               }}
-              className="px-2.5 py-1 rounded-md border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-white/70 hover:border-blue-500 hover:text-blue-600 dark:hover:text-white transition-colors disabled:opacity-50"
+              className="px-2.5 py-1 rounded-md border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-white/70 hover:border-blue-500 hover:text-[#0071e3] dark:hover:text-white transition-colors disabled:opacity-50"
             >
               {preset}
             </button>
@@ -155,7 +155,7 @@ export function SpfDmarcTool() {
       </form>
 
       {error && (
-        <div className="p-4 bg-white dark:bg-[#0f0f11] border border-slate-300 dark:border-white/20 rounded-lg text-sm text-slate-800 dark:text-white">
+        <div className="p-4 bg-white dark:bg-[#1c1c1e] border border-slate-300 dark:border-white/20 rounded-lg text-sm text-slate-800 dark:text-white">
           <span className="font-semibold text-slate-900 dark:text-white mr-2">Notice:</span>
           {error}
         </div>
@@ -174,7 +174,7 @@ export function SpfDmarcTool() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                   <div>
                     <span className="text-slate-500 dark:text-white/40">SPF Enforcement: </span>
-                    <span className="text-blue-600 dark:text-blue-400 font-semibold">{data.spfPolicy || "Detected"}</span>
+                    <span className="text-[#0071e3] dark:text-blue-400 font-semibold">{data.spfPolicy || "Detected"}</span>
                   </div>
                   <div>
                     <span className="text-slate-500 dark:text-white/40">Status: </span>
@@ -200,7 +200,7 @@ export function SpfDmarcTool() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                   <div>
                     <span className="text-slate-500 dark:text-white/40">Policy Mode: </span>
-                    <span className="text-blue-600 dark:text-blue-400 font-semibold">{data.dmarcPolicy || "Configured"}</span>
+                    <span className="text-[#0071e3] dark:text-blue-400 font-semibold">{data.dmarcPolicy || "Configured"}</span>
                   </div>
                   {data.dmarcRua && (
                     <div>

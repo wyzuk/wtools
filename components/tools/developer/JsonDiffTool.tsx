@@ -130,7 +130,7 @@ export function JsonDiffTool() {
           type="button"
           disabled={limitReached}
           onClick={handleCompare}
-          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-blue-500 hover:bg-blue-600 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm"
+          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-[#0071e3] hover:bg-[#0077ed] active:scale-95 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm"
         >
           <ArrowRightLeft className="w-4 h-4" />
           <span>Compare JSON</span>
@@ -138,7 +138,7 @@ export function JsonDiffTool() {
       </div>
 
       {diffResult.error && (
-        <div className="p-4 bg-white dark:bg-[#0f0f11] border border-slate-300 dark:border-white/20 rounded-lg text-sm text-slate-800 dark:text-white">
+        <div className="p-4 bg-white dark:bg-[#1c1c1e] border border-slate-300 dark:border-white/20 rounded-lg text-sm text-slate-800 dark:text-white">
           <span className="font-semibold text-slate-900 dark:text-white mr-2">Notice:</span>
           {diffResult.error}
         </div>

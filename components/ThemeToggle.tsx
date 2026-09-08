@@ -21,13 +21,13 @@ export function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-      className="p-2 rounded-md border border-slate-200 dark:border-white/15 text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-white hover:border-blue-500/50 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+      className="p-2 rounded-xl border border-black/[0.08] dark:border-white/[0.12] bg-white dark:bg-neutral-800 text-[#1d1d1f] dark:text-white hover:border-[#0071e3] hover:shadow-sm active:scale-95 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
       title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       {theme === "dark" ? (
-        <Sun className="w-4 h-4 text-blue-400" />
+        <Sun className="w-4 h-4 text-amber-400 drop-shadow-sm" />
       ) : (
-        <Moon className="w-4 h-4 text-slate-700" />
+        <Moon className="w-4 h-4 text-[#424245]" />
       )}
     </button>
   );

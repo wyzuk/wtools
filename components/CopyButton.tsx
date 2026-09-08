@@ -34,13 +34,17 @@ export function CopyButton({ text, label = "Copy", className = "" }: CopyButtonP
       type="button"
       onClick={handleCopy}
       aria-label={label}
-      className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-md border transition-colors ${
+      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border transition-all active:scale-95 shadow-[0_1px_2px_rgba(0,0,0,0.04)] ${
         copied
-          ? "bg-blue-500 text-white border-blue-500"
-          : "bg-slate-100 text-slate-700 border-slate-200 hover:text-slate-900 hover:border-blue-500 dark:bg-white/5 dark:text-white/80 dark:border-white/10 dark:hover:text-white dark:hover:border-blue-500/60"
+          ? "bg-[#27c93f] text-white border-[#1aab29]"
+          : "bg-white dark:bg-neutral-800 text-[#1d1d1f] dark:text-[#f5f5f7] border-black/[0.1] dark:border-white/[0.12] hover:bg-slate-50 dark:hover:bg-neutral-700/60 hover:border-[#0071e3]/60"
       } ${className}`}
     >
-      {copied ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
+      {copied ? (
+        <Check className="w-3.5 h-3.5 text-white animate-in zoom-in-50 duration-150" />
+      ) : (
+        <Copy className="w-3.5 h-3.5 text-slate-500 dark:text-neutral-400" />
+      )}
       <span>{copied ? "Copied" : label}</span>
     </button>
   );

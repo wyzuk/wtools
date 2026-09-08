@@ -58,7 +58,7 @@ export function MyIpTool() {
 
   return (
     <div className="space-y-6">
-      <div className="p-7 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-5 shadow-sm dark:shadow-none transition-colors">
+      <div className="p-7 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-5 shadow-sm dark:shadow-none transition-colors">
         <div>
           <span className="text-xs font-semibold text-slate-500 dark:text-white/50 uppercase tracking-wider block mb-1 font-mono">
             Detected Public IP
@@ -72,7 +72,7 @@ export function MyIpTool() {
           type="button"
           onClick={fetchMyIp}
           disabled={loading}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-500 hover:bg-blue-600 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm shrink-0"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0071e3] hover:bg-[#0077ed] active:scale-95 disabled:opacity-50 text-white text-sm font-medium transition-colors shadow-sm shrink-0"
         >
           {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <RefreshCw className="w-4 h-4" />}
           <span>Refresh IP</span>
@@ -80,7 +80,7 @@ export function MyIpTool() {
       </div>
 
       {error && (
-        <div className="p-4 bg-white dark:bg-[#0f0f11] border border-slate-300 dark:border-white/20 rounded-lg text-sm text-slate-800 dark:text-white">
+        <div className="p-4 bg-white dark:bg-[#1c1c1e] border border-slate-300 dark:border-white/20 rounded-lg text-sm text-slate-800 dark:text-white">
           <span className="font-semibold text-slate-900 dark:text-white mr-2">Notice:</span>
           {error}
         </div>

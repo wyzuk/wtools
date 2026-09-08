@@ -71,7 +71,7 @@ export function CountryCallingCodesTool() {
 
   return (
     <div className="space-y-6">
-      <div className="p-6 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl space-y-3 shadow-sm dark:shadow-none transition-colors">
+      <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl space-y-3 shadow-sm dark:shadow-none transition-colors">
         <label htmlFor="country-query" className="block text-xs font-semibold text-slate-700 dark:text-white/70 uppercase tracking-wider font-mono">
           Search Calling Codes
         </label>
@@ -105,7 +105,7 @@ export function CountryCallingCodesTool() {
                 <tr key={item.iso} className="hover:bg-slate-50 dark:hover:bg-white/5">
                   <td className="py-2.5 pr-4 text-slate-900 dark:text-white font-medium">{item.country}</td>
                   <td className="py-2.5 px-4 text-slate-500 dark:text-white/60">{item.iso}</td>
-                  <td className="py-2.5 px-4 text-blue-600 dark:text-blue-400 font-semibold">{item.code}</td>
+                  <td className="py-2.5 px-4 text-[#0071e3] dark:text-blue-400 font-semibold">{item.code}</td>
                   <td className="py-2.5 px-4 text-slate-500 dark:text-white/50">{item.pattern}</td>
                   <td className="py-2.5 pl-4 text-right">
                     <CopyButton text={item.code} label="Copy" />

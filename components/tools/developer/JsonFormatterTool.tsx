@@ -66,13 +66,13 @@ export function JsonFormatterTool() {
       {limitReached && <UsageLimitBanner />}
 
       {/* Controls Bar */}
-      <div className="p-4 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-sm dark:shadow-none transition-colors">
+      <div className="p-4 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-sm dark:shadow-none transition-colors">
         <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
             disabled={limitReached}
             onClick={() => formatJson(indent)}
-            className="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 disabled:opacity-50 text-white text-xs font-semibold transition-colors shadow-sm"
+            className="px-4 py-2 rounded-lg bg-[#0071e3] hover:bg-[#0077ed] active:scale-95 disabled:opacity-50 text-white text-xs font-semibold transition-colors shadow-sm"
           >
             Prettify
           </button>
@@ -143,12 +143,12 @@ export function JsonFormatterTool() {
         <div className="flex flex-wrap items-center justify-between text-xs font-mono px-1 gap-2">
           <div className="flex items-center gap-2">
             {isValid ? (
-              <span className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium">
+              <span className="inline-flex items-center gap-1.5 text-[#0071e3] dark:text-blue-400 font-medium">
                 <Check className="w-4 h-4" /> Valid JSON
               </span>
             ) : (
               <span className="inline-flex items-center gap-1.5 text-slate-800 dark:text-white bg-slate-100 dark:bg-white/10 px-2.5 py-1 rounded border border-slate-300 dark:border-white/20">
-                <AlertCircle className="w-4 h-4 text-blue-600 dark:text-blue-400" /> Syntax Error: {error}
+                <AlertCircle className="w-4 h-4 text-[#0071e3] dark:text-blue-400" /> Syntax Error: {error}
               </span>
             )}
           </div>

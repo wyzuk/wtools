@@ -54,7 +54,7 @@ export function HttpStatusCodesTool() {
   return (
     <div className="space-y-6">
       {/* Search and Filters */}
-      <div className="p-6 bg-white dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl space-y-4 shadow-sm dark:shadow-none transition-colors">
+      <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-2xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.05)] transition-colors">
         <div className="relative">
           <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           <input
@@ -98,7 +98,7 @@ export function HttpStatusCodesTool() {
             <tbody className="divide-y divide-slate-100 dark:divide-white/5">
               {filtered.map((item) => (
                 <tr key={item.code} className="hover:bg-slate-50 dark:hover:bg-white/5">
-                  <td className="py-2.5 pr-4 text-blue-600 dark:text-blue-400 font-bold">{item.code}</td>
+                  <td className="py-2.5 pr-4 text-[#0071e3] dark:text-blue-400 font-bold">{item.code}</td>
                   <td className="py-2.5 px-4 text-slate-900 dark:text-white font-medium">{item.phrase}</td>
                   <td className="py-2.5 px-4 text-slate-600 dark:text-white/70 max-w-md">{item.description}</td>
                   <td className="py-2.5 pl-4 text-right text-slate-400 dark:text-white/40">{item.rfc}</td>

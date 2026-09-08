@@ -7,6 +7,7 @@ import { Search, Menu, X, ExternalLink } from "lucide-react";
 import { SearchModal } from "./SearchModal";
 import { ThemeToggle } from "./ThemeToggle";
 import { UsageBadge } from "./UsageBadge";
+import { MacTrafficLights } from "./MacTrafficLights";
 
 export function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -34,64 +35,65 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-neutral-800 bg-white/95 dark:bg-black/95 backdrop-blur-sm transition-colors">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-          {/* Logo & Distinctive WTOOLS Brand */}
-          <Link href="/" className="flex items-center gap-3 group shrink-0 select-none">
-            <div className="relative w-9 h-9 rounded-lg bg-neutral-950 border border-neutral-800 overflow-hidden flex items-center justify-center p-1 group-hover:border-blue-500 transition-colors shadow-sm">
-              <Image
-                src="/assets/logo.png"
-                alt="WTOOLS"
-                width={32}
-                height={32}
-                priority
-                className="object-contain"
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="font-black text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-blue-500 transition-colors font-sans">
-                WTOOLS
-              </span>
-              <span className="hidden sm:inline-block text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900 font-semibold tracking-wider">
-                DEV
-              </span>
-            </div>
-          </Link>
+      <header className="sticky top-0 z-40 w-full border-b border-black/[0.08] dark:border-white/[0.08] macos-glass transition-colors">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-4">
+          {/* macOS Traffic Lights + Brand */}
+          <div className="flex items-center gap-4 shrink-0">
+            <MacTrafficLights className="hidden sm:flex" size="sm" />
+            
+            <Link href="/" className="flex items-center gap-3 group select-none">
+              <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-[10px] bg-gradient-to-b from-white to-slate-100 dark:from-neutral-800 dark:to-neutral-900 border border-black/[0.1] dark:border-white/[0.15] overflow-hidden flex items-center justify-center p-1.5 group-hover:border-[#0071e3] transition-all shadow-[0_1px_3px_rgba(0,0,0,0.08)]">
+                <Image
+                  src="/assets/logo.png"
+                  alt="WTOOLS"
+                  width={32}
+                  height={32}
+                  priority
+                  className="object-contain drop-shadow-sm"
+                />
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-lg sm:text-xl tracking-tight text-[#1d1d1f] dark:text-white group-hover:text-[#0071e3] transition-colors">
+                  WTOOLS
+                </span>
+                <span className="hidden sm:inline-block text-[10px] font-semibold uppercase px-2 py-0.5 rounded-full bg-blue-500/10 text-[#0071e3] dark:text-[#2997ff] border border-[#0071e3]/20 tracking-wider">
+                  macOS
+                </span>
+              </div>
+            </Link>
+          </div>
 
-          {/* Quick Command / Search Trigger Button */}
+          {/* Spotlight Search Trigger Bar */}
           <button
             type="button"
             onClick={() => setIsSearchOpen(true)}
-            className="flex-1 max-w-md hidden md:flex items-center justify-between px-3.5 py-2 text-sm text-slate-500 dark:text-neutral-400 bg-slate-50 dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-lg hover:border-blue-500/60 hover:text-slate-900 dark:hover:text-white transition-colors"
+            className="flex-1 max-w-md hidden md:flex items-center justify-between px-3.5 py-1.5 sm:py-2 text-xs sm:text-sm text-slate-500 dark:text-neutral-400 bg-black/[0.03] dark:bg-white/[0.06] border border-black/[0.08] dark:border-white/[0.1] rounded-xl hover:border-[#0071e3] hover:bg-white dark:hover:bg-neutral-800 hover:text-[#1d1d1f] dark:hover:text-white transition-all shadow-inner"
           >
             <span className="flex items-center gap-2.5">
-              <Search className="w-4 h-4 text-blue-500" />
-              <span>Search tools...</span>
+              <Search className="w-3.5 h-3.5 text-[#0071e3]" />
+              <span className="font-medium text-slate-600 dark:text-neutral-300">Spotlight search utilities...</span>
             </span>
-            <div className="flex items-center gap-1.5">
-              <kbd className="font-mono text-xs bg-slate-200/80 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-slate-600 dark:text-neutral-300 border border-slate-300 dark:border-neutral-700">
-                /
+            <span className="flex items-center gap-1.5">
+              <kbd className="font-mono text-[11px] font-semibold bg-white dark:bg-neutral-700 px-1.5 py-0.5 rounded-md text-slate-600 dark:text-neutral-200 border border-black/[0.1] dark:border-white/[0.15] shadow-sm">
+                ⌘K
               </kbd>
-              <kbd className="font-mono text-xs bg-slate-200/80 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-slate-600 dark:text-neutral-300 border border-slate-300 dark:border-neutral-700">
-                Ctrl K
-              </kbd>
-            </div>
+            </span>
           </button>
 
           {/* Desktop Right Nav Items */}
-          <div className="hidden md:flex items-center gap-4 text-sm font-medium">
+          <div className="hidden md:flex items-center gap-3 text-sm font-medium">
             <UsageBadge />
 
-            <nav className="flex items-center gap-4 border-l border-slate-200 dark:border-neutral-800 pl-4">
+            <nav className="flex items-center gap-1 border-l border-black/[0.08] dark:border-white/[0.1] pl-3">
               <Link
                 href="/tools"
-                className="text-slate-600 dark:text-neutral-300 hover:text-blue-500 dark:hover:text-white transition-colors"
+                className="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium text-[#424245] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-white hover:bg-black/[0.05] dark:hover:bg-white/[0.08] transition-all"
               >
                 Tools
               </Link>
               <Link
                 href="/developer"
-                className="text-slate-600 dark:text-neutral-300 hover:text-blue-500 dark:hover:text-white transition-colors"
+                className="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium text-[#424245] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-white hover:bg-black/[0.05] dark:hover:bg-white/[0.08] transition-all"
               >
                 Developer
               </Link>
@@ -99,7 +101,7 @@ export function Navbar() {
                 href="https://github.com/wyzuk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 text-slate-600 dark:text-neutral-300 hover:text-blue-500 dark:hover:text-white transition-colors"
+                className="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium text-[#424245] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-white hover:bg-black/[0.05] dark:hover:bg-white/[0.08] transition-all flex items-center gap-1"
                 title="GitHub @wyzuk"
               >
                 <span>GitHub</span>
@@ -107,7 +109,7 @@ export function Navbar() {
               </a>
             </nav>
 
-            <div className="border-l border-slate-200 dark:border-neutral-800 pl-3">
+            <div className="border-l border-black/[0.08] dark:border-white/[0.1] pl-3">
               <ThemeToggle />
             </div>
           </div>
@@ -117,14 +119,14 @@ export function Navbar() {
             <ThemeToggle />
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="p-2 text-slate-700 dark:text-neutral-200 hover:text-slate-900 dark:hover:text-white rounded-lg border border-slate-200 dark:border-neutral-800"
+              className="p-2 text-[#1d1d1f] dark:text-neutral-200 hover:bg-black/[0.05] dark:hover:bg-white/10 rounded-xl border border-black/[0.08] dark:border-white/[0.1] transition-colors"
               aria-label="Search tools"
             >
               <Search className="w-4 h-4" />
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-slate-700 dark:text-neutral-200 hover:text-slate-900 dark:hover:text-white rounded-lg border border-slate-200 dark:border-neutral-800"
+              className="p-2 text-[#1d1d1f] dark:text-neutral-200 hover:bg-black/[0.05] dark:hover:bg-white/10 rounded-xl border border-black/[0.08] dark:border-white/[0.1] transition-colors"
               aria-label="Menu"
             >
               {isMobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -134,8 +136,8 @@ export function Navbar() {
 
         {/* Mobile Dropdown */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-200 dark:border-neutral-800 bg-white dark:bg-black px-4 py-4 space-y-3">
-            <div className="pb-2 border-b border-slate-100 dark:border-neutral-800">
+          <div className="md:hidden border-t border-black/[0.08] dark:border-white/[0.1] bg-white/95 dark:bg-[#161618]/95 backdrop-blur-xl px-4 py-4 space-y-3">
+            <div className="pb-2 border-b border-black/[0.06] dark:border-white/[0.08]">
               <UsageBadge />
             </div>
             <Link
