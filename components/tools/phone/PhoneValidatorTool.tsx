@@ -156,7 +156,6 @@ export function PhoneValidatorTool() {
         </div>
       </form>
 
-      {/* Privacy Notice */}
       <div className="p-4 bg-slate-50 dark:bg-[#0d0d0d] border border-slate-200 dark:border-white/10 rounded-xl text-xs text-slate-600 dark:text-white/50 leading-relaxed">
         <span className="font-semibold text-slate-900 dark:text-white mr-1.5">Privacy Notice:</span>
         Phone validation adheres to ITU-T E.164 telecommunication standards and carrier routing ranges. WTOOLS never collects, stores, or transmits phone numbers to third-party databases.
@@ -171,7 +170,6 @@ export function PhoneValidatorTool() {
             </div>
           ) : (
             <>
-              {/* Validation Status Banner */}
               <div className="p-5 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl flex flex-wrap items-center justify-between gap-4 text-xs font-mono shadow-sm dark:shadow-none">
                 <div className="flex items-center gap-3">
                   <span className="text-slate-500 dark:text-white/40 text-xs">Status:</span>
@@ -191,7 +189,6 @@ export function PhoneValidatorTool() {
                 </div>
               </div>
 
-              {/* Data Table */}
               <ResultCard
                 title={`Telecom Details: ${result.e164}`}
                 items={[

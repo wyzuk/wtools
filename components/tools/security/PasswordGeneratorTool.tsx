@@ -62,7 +62,6 @@ export function PasswordGeneratorTool() {
     <div className="space-y-6">
       {limitReached && <UsageLimitBanner />}
 
-      {/* Generated Display */}
       <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-2xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.05)] transition-colors">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="w-full">
@@ -97,7 +96,6 @@ export function PasswordGeneratorTool() {
         </div>
       </div>
 
-      {/* Controls */}
       <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl space-y-5 shadow-sm dark:shadow-none transition-colors">
         <div>
           <div className="flex items-center justify-between mb-2">
@@ -146,7 +144,6 @@ export function PasswordGeneratorTool() {
         </div>
       </div>
 
-      {/* Batch Generator */}
       <ResultCard title="Alternative Variations">
         <div className="divide-y divide-slate-100 dark:divide-white/5 font-mono text-xs sm:text-sm">
           {batch.map((pass, idx) => (

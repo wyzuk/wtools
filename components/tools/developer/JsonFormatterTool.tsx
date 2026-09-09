@@ -65,7 +65,6 @@ export function JsonFormatterTool() {
     <div className="space-y-6">
       {limitReached && <UsageLimitBanner />}
 
-      {/* Controls Bar */}
       <div className="p-4 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-sm dark:shadow-none transition-colors">
         <div className="flex flex-wrap items-center gap-2">
           <button
@@ -125,7 +124,6 @@ export function JsonFormatterTool() {
         </div>
       </div>
 
-      {/* Editor & Validation Status */}
       <div className="space-y-2">
         <div className="relative">
           <textarea
@@ -139,7 +137,6 @@ export function JsonFormatterTool() {
           />
         </div>
 
-        {/* Status Bar */}
         <div className="flex flex-wrap items-center justify-between text-xs font-mono px-1 gap-2">
           <div className="flex items-center gap-2">
             {isValid ? (

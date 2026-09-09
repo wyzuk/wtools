@@ -24,9 +24,7 @@ export default function DeveloperPage() {
 
   return (
     <div className="py-8 sm:py-12 px-4 sm:px-6 max-w-4xl mx-auto space-y-10">
-      {/* macOS System Info Window */}
       <section className="bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-3xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_16px_40px_-8px_rgba(0,0,0,0.06)] overflow-hidden transition-all">
-        {/* macOS Title Bar */}
         <div className="px-6 py-3.5 border-b border-black/[0.06] dark:border-white/[0.08] bg-black/[0.015] dark:bg-white/[0.02] flex items-center justify-between">
           <div className="flex items-center gap-3">
             <MacTrafficLights size="xs" />
@@ -62,7 +60,6 @@ export default function DeveloperPage() {
             </div>
           </div>
 
-          {/* Personal statement */}
           <div className="text-sm sm:text-base text-[#333336] dark:text-[#d1d1d6] space-y-3.5 leading-relaxed border-t border-black/[0.06] dark:border-white/[0.08] pt-6">
             <p>
               Hi, I&apos;m <strong className="text-[#1d1d1f] dark:text-white font-semibold">Wasee</strong> &mdash; better known online as{" "}
@@ -78,7 +75,6 @@ export default function DeveloperPage() {
             </p>
           </div>
 
-          {/* Action Links */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <a
               href="https://github.com/wyzuk"
@@ -104,7 +100,6 @@ export default function DeveloperPage() {
         </div>
       </section>
 
-      {/* Focus & Interests */}
       <section className="space-y-4">
         <div className="border-b border-black/[0.06] dark:border-white/[0.08] pb-3">
           <h2 className="text-base sm:text-lg font-bold text-[#1d1d1f] dark:text-white flex items-center gap-2">
@@ -141,7 +136,6 @@ export default function DeveloperPage() {
         </div>
       </section>
 
-      {/* Philosophy of WTOOLS */}
       <section className="p-7 bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-3xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.06)] transition-all">
         <h2 className="text-base font-bold text-[#1d1d1f] dark:text-white flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#0071e3]" />

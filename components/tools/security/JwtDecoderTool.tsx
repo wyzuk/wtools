@@ -130,7 +130,6 @@ export function JwtDecoderTool() {
 
       {decoded && decoded.valid && (hasDecoded || !limitReached) && (
         <div className="space-y-6">
-          {/* Status Bar */}
           <div className="p-5 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono shadow-sm dark:shadow-none">
             <div>
               <span className="text-slate-500 dark:text-white/40 block text-[11px] mb-0.5">Algorithm (alg)</span>
@@ -148,19 +147,16 @@ export function JwtDecoderTool() {
             </div>
           </div>
 
-          {/* Header Card */}
           <ResultCard
             title="JWT Header (Algorithm & Token Type)"
             rawJson={decoded.header}
           />
 
-          {/* Payload Card */}
           <ResultCard
             title="JWT Payload (Claims)"
             rawJson={decoded.payload}
           />
 
-          {/* Timestamps Card */}
           <ResultCard
             title="Timestamps & Claim Analysis"
             items={[

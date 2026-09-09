@@ -73,7 +73,6 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
         className="w-full max-w-2xl bg-white/95 dark:bg-[#1c1c1e]/95 backdrop-blur-2xl border border-black/[0.12] dark:border-white/[0.15] rounded-2xl shadow-[0_24px_70px_-10px_rgba(0,0,0,0.3)] overflow-hidden scale-in-95 duration-150"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* macOS Spotlight Window Top Bar */}
         <div className="px-5 py-3 border-b border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between bg-black/[0.02] dark:bg-white/[0.02]">
           <div className="flex items-center gap-3">
             <MacTrafficLights size="xs" />
@@ -86,7 +85,6 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           </kbd>
         </div>
 
-        {/* Search Input Bar */}
         <div className="flex items-center px-5 py-4 border-b border-black/[0.06] dark:border-white/[0.08] gap-3.5 bg-white/50 dark:bg-black/20">
           <Search className="w-5 h-5 text-[#0071e3] shrink-0" />
           <input
@@ -108,7 +106,6 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           )}
         </div>
 
-        {/* Results List */}
         <div className="max-h-[380px] overflow-y-auto p-2 space-y-1">
           {results.length === 0 ? (
             <div className="py-12 text-center text-sm text-[#86868b] dark:text-[#a1a1a6]">
@@ -153,7 +150,6 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           )}
         </div>
 
-        {/* Footer info */}
         <div className="px-5 py-3 bg-black/[0.02] dark:bg-white/[0.02] border-t border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between text-xs text-[#86868b] dark:text-[#a1a1a6]">
           <span className="font-mono text-[11px]">{TOOLS.length} utilities available</span>
           <Link

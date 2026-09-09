@@ -103,7 +103,6 @@ export function UuidGeneratorTool() {
     <div className="space-y-6">
       {limitReached && <UsageLimitBanner />}
 
-      {/* Configuration Controls */}
       <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-2xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.05)] transition-colors">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
@@ -155,7 +154,6 @@ export function UuidGeneratorTool() {
           </div>
         </div>
 
-        {/* Checkbox Options */}
         <div className="flex flex-wrap items-center gap-4 pt-1 text-xs font-mono text-slate-700 dark:text-white">
           <label className="flex items-center gap-2 cursor-pointer select-none">
             <input
@@ -183,7 +181,6 @@ export function UuidGeneratorTool() {
         </div>
       </div>
 
-      {/* Results Output */}
       <ResultCard
         title={`Generated Identifiers (${results.length})`}
         copyAllText={allText}

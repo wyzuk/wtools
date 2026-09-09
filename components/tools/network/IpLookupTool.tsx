@@ -111,7 +111,6 @@ export function IpLookupTool({ initialIp = "" }: { initialIp?: string }) {
     <div className="space-y-6">
       {limitReached && <UsageLimitBanner />}
 
-      {/* Input Form */}
       <form onSubmit={handleSubmit} className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-2xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.05)] transition-colors">
         <div>
           <label htmlFor="ip-input" className="block text-xs font-semibold text-slate-700 dark:text-white/70 mb-2 uppercase tracking-wider font-mono">
@@ -138,7 +137,6 @@ export function IpLookupTool({ initialIp = "" }: { initialIp?: string }) {
           </div>
         </div>
 
-        {/* Quick Presets */}
         <div className="flex flex-wrap items-center gap-2 pt-1 text-xs text-slate-500 dark:text-white/50">
           <span>Presets:</span>
           {["My Current IP", "8.8.8.8", "1.1.1.1", "9.9.9.9", "208.67.222.222"].map((preset) => (
@@ -163,7 +161,6 @@ export function IpLookupTool({ initialIp = "" }: { initialIp?: string }) {
         </div>
       </form>
 
-      {/* Error state */}
       {error && (
         <div className="p-4 bg-white dark:bg-[#1c1c1e] border border-slate-300 dark:border-white/20 rounded-lg text-sm text-slate-800 dark:text-white">
           <span className="font-semibold text-slate-900 dark:text-white mr-2">Notice:</span>
@@ -171,7 +168,6 @@ export function IpLookupTool({ initialIp = "" }: { initialIp?: string }) {
         </div>
       )}
 
-      {/* Results */}
       {data && (
         <ResultCard
           title={`IP Intelligence: ${data.ip}`}

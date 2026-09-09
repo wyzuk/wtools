@@ -39,7 +39,6 @@ function ToolsContent() {
 
   return (
     <div className="py-6 sm:py-10 px-4 sm:px-6 max-w-7xl mx-auto space-y-8">
-      {/* macOS Window Header */}
       <div className="bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-3xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_12px_32px_-8px_rgba(0,0,0,0.06)] overflow-hidden">
         <div className="px-6 py-3.5 border-b border-black/[0.06] dark:border-white/[0.08] bg-black/[0.015] dark:bg-white/[0.02] flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -66,7 +65,6 @@ function ToolsContent() {
             </p>
           </div>
 
-          {/* Search & Filter Controls */}
           <div className="space-y-4">
             <div className="relative">
               <Search className="w-4 h-4 text-[#0071e3] absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -87,7 +85,6 @@ function ToolsContent() {
               )}
             </div>
 
-            {/* Category Segmented Controls */}
             <div className="p-1.5 bg-[#f5f5f7] dark:bg-black/40 rounded-2xl border border-black/[0.05] dark:border-white/[0.06] flex items-center gap-1.5 overflow-x-auto no-scrollbar">
               <button
                 onClick={() => setActiveCategory("all")}
@@ -122,7 +119,6 @@ function ToolsContent() {
         </div>
       </div>
 
-      {/* Tool Grid */}
       {filteredTools.length === 0 ? (
         <div className="py-16 text-center bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-3xl shadow-macos">
           <SlidersHorizontal className="w-8 h-8 text-slate-400 mx-auto mb-3" />

@@ -33,9 +33,7 @@ export default function HomePage() {
 
   return (
     <div className="py-6 sm:py-10 px-4 sm:px-6 max-w-7xl mx-auto space-y-10 sm:space-y-12">
-      {/* macOS Workspace Hero Window */}
       <section className="bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-3xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_16px_40px_-8px_rgba(0,0,0,0.06)] overflow-hidden transition-all">
-        {/* macOS Title Bar */}
         <div className="px-6 py-4 border-b border-black/[0.06] dark:border-white/[0.08] bg-black/[0.015] dark:bg-white/[0.02] flex items-center justify-between">
           <div className="flex items-center gap-3">
             <MacTrafficLights size="sm" />
@@ -51,7 +49,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Hero Content */}
         <div className="p-6 sm:p-10 space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-3 max-w-2xl">
@@ -86,7 +83,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Spotlight Search Input */}
           <div className="space-y-4">
             <div className="relative group">
               <Search className="w-5 h-5 text-[#0071e3] absolute left-4 sm:left-5 top-1/2 -translate-y-1/2 pointer-events-none transition-transform group-focus-within:scale-110" />
@@ -113,7 +109,6 @@ export default function HomePage() {
               )}
             </div>
 
-            {/* macOS Segmented Category Control */}
             <div className="p-1.5 bg-[#f5f5f7] dark:bg-black/40 rounded-2xl border border-black/[0.05] dark:border-white/[0.06] flex items-center gap-1.5 overflow-x-auto no-scrollbar">
               <button
                 onClick={() => setActiveCategory("all")}
@@ -148,7 +143,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Filtered Search / Category Results */}
       {(searchQuery.trim() || activeCategory !== "all") && (
         <section className="space-y-4">
           <div className="flex items-center justify-between">
@@ -185,7 +179,6 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* Popular Tools Section */}
       {!searchQuery.trim() && activeCategory === "all" && (
         <section className="space-y-4">
           <div className="flex items-center justify-between">
@@ -215,7 +208,6 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* Categorized Catalog (macOS System Settings pane style) */}
       {!searchQuery.trim() && activeCategory === "all" && (
         <section className="space-y-6 pt-4 border-t border-black/[0.06] dark:border-white/[0.08]">
           <div>
@@ -281,7 +273,6 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* Developer Callout (macOS System Profile design) */}
       <section className="bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-3xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_10px_30px_-6px_rgba(0,0,0,0.06)] overflow-hidden transition-all">
         <div className="px-6 py-3.5 border-b border-black/[0.06] dark:border-white/[0.08] bg-black/[0.015] dark:bg-white/[0.02] flex items-center justify-between">
           <div className="flex items-center gap-3">

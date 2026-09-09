@@ -50,7 +50,6 @@ export function UsageProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    // 1. Check local storage cache for instant UI rendering
     const today = getTodayString();
     try {
       const raw = localStorage.getItem("wtools_usage");
@@ -68,7 +67,6 @@ export function UsageProvider({ children }: { children: React.ReactNode }) {
       // ignore
     }
 
-    // 2. Fetch authoritative state from server
     syncWithServer();
   }, [syncWithServer]);
 

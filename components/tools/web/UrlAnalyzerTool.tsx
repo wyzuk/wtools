@@ -125,7 +125,6 @@ export function UrlAnalyzerTool() {
             ]}
           />
 
-          {/* Query Parameters Table */}
           <ResultCard title={`Decoded Query Parameters (${parsed.params?.length || 0})`}>
             {(!parsed.params || parsed.params.length === 0) ? (
               <div className="py-4 text-center text-sm text-slate-400 dark:text-white/40">

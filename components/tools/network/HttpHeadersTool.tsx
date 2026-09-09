@@ -114,7 +114,6 @@ export function HttpHeadersTool() {
           rawJson={data.headers}
         >
           <div className="space-y-5">
-            {/* Summary Bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm font-sans border-b border-slate-200 dark:border-white/10 pb-4">
               <div>
                 <span className="text-slate-500 dark:text-white/40 block text-xs">Status Code</span>
@@ -134,7 +133,6 @@ export function HttpHeadersTool() {
               </div>
             </div>
 
-            {/* Headers Table */}
             <div className="overflow-x-auto">
               <table className="w-full text-left text-sm font-sans">
                 <thead>

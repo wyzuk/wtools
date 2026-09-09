@@ -92,7 +92,6 @@ export function JsonDiffTool() {
       {limitReached && <UsageLimitBanner />}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Document A */}
         <div className="space-y-2">
           <label htmlFor="json-a-input" className="block text-xs font-semibold text-slate-700 dark:text-white/70 uppercase tracking-wider font-mono">
             Original JSON (A)
@@ -108,7 +107,6 @@ export function JsonDiffTool() {
           />
         </div>
 
-        {/* Document B */}
         <div className="space-y-2">
           <label htmlFor="json-b-input" className="block text-xs font-semibold text-slate-700 dark:text-white/70 uppercase tracking-wider font-mono">
             Modified JSON (B)

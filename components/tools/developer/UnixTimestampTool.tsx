@@ -48,7 +48,6 @@ export function UnixTimestampTool() {
     <div className="space-y-6">
       {limitReached && <UsageLimitBanner />}
 
-      {/* Live Current Epoch Banner */}
       <div className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm dark:shadow-none transition-colors">
         <div>
           <span className="text-xs font-semibold text-slate-700 dark:text-white/50 uppercase tracking-wider font-mono block mb-1">
@@ -73,7 +72,6 @@ export function UnixTimestampTool() {
         </div>
       </div>
 
-      {/* Converter Input */}
       <form onSubmit={handleConvert} className="p-6 bg-white dark:bg-[#1c1c1e] border border-slate-200 dark:border-white/10 rounded-2xl space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.05)] transition-colors">
         <div>
           <label htmlFor="epoch-input" className="block text-xs font-semibold text-slate-700 dark:text-white/70 mb-2 uppercase tracking-wider font-mono">

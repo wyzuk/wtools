@@ -7,7 +7,6 @@ export function Footer() {
   return (
     <footer className="border-t border-black/[0.08] dark:border-white/[0.08] bg-white/70 dark:bg-[#161618]/70 backdrop-blur-xl text-[#515154] dark:text-[#a1a1a6] py-12 px-4 sm:px-6 transition-colors">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        {/* Brand info */}
         <div className="md:col-span-2 space-y-3">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-[10px] bg-gradient-to-b from-white to-slate-100 dark:from-neutral-800 dark:to-neutral-900 border border-black/[0.1] dark:border-white/[0.15] p-1.5 flex items-center justify-center shadow-sm">
@@ -39,7 +38,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Navigation Links */}
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-wider text-[#1d1d1f] dark:text-white mb-3 font-mono">
             Navigation
@@ -78,7 +76,6 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Developer & External */}
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-wider text-[#1d1d1f] dark:text-white mb-3 font-mono">
             Source &amp; Author
@@ -121,7 +118,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom disclaimer */}
       <div className="max-w-7xl mx-auto pt-6 border-t border-black/[0.06] dark:border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#86868b] dark:text-[#a1a1a6]">
         <div>
           &copy; {new Date().getFullYear()} WTOOLS &bull; Engineered like macOS with precision and care.

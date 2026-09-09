@@ -149,7 +149,6 @@ export function SubnetCalcTool() {
           </div>
         </div>
 
-        {/* Quick CIDR buttons & Calculate */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
           <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 dark:text-white/50">
             <span>Common:</span>

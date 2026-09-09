@@ -36,7 +36,6 @@ export function ResultCard({
 
   return (
     <div className="bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04),0_12px_28px_-6px_rgba(0,0,0,0.06)] transition-all">
-      {/* macOS Window Titlebar */}
       <div className="px-5 py-3.5 border-b border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between bg-black/[0.015] dark:bg-white/[0.02]">
         <div className="flex items-center gap-3">
           <MacTrafficLights size="xs" />
@@ -61,7 +60,6 @@ export function ResultCard({
         </div>
       </div>
 
-      {/* Content Area */}
       <div className="p-5 sm:p-6">
         {showRaw && rawString ? (
           <div className="rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.1] shadow-inner">

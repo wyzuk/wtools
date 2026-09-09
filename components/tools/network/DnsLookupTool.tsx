@@ -153,7 +153,6 @@ export function DnsLookupTool() {
           rawJson={data.raw}
         >
           <div className="space-y-4">
-            {/* Meta info bar */}
             <div className="flex flex-wrap items-center gap-4 text-sm font-sans border-b border-slate-200 dark:border-white/10 pb-3">
               <div>
                 <span className="text-slate-500 dark:text-white/40">Status: </span>
@@ -173,7 +172,6 @@ export function DnsLookupTool() {
               </div>
             </div>
 
-            {/* Answer Records Table */}
             {(!Array.isArray(data.answers) || data.answers.length === 0) ? (
               <p className="text-sm text-slate-500 dark:text-white/50 py-6 text-center font-sans">
                 No {data.query.type} records found for this host.

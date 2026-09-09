@@ -37,7 +37,6 @@ export function Navbar() {
     <>
       <header className="sticky top-0 z-40 w-full border-b border-black/[0.08] dark:border-white/[0.08] macos-glass transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-4">
-          {/* macOS Traffic Lights + Brand */}
           <div className="flex items-center gap-4 shrink-0">
             <MacTrafficLights className="hidden sm:flex" size="sm" />
             
@@ -63,7 +62,6 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Spotlight Search Trigger Bar */}
           <button
             type="button"
             onClick={() => setIsSearchOpen(true)}
@@ -80,7 +78,6 @@ export function Navbar() {
             </span>
           </button>
 
-          {/* Desktop Right Nav Items */}
           <div className="hidden md:flex items-center gap-3 text-sm font-medium">
             <UsageBadge />
 
@@ -114,7 +111,6 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Right Actions */}
           <div className="flex md:hidden items-center gap-2">
             <ThemeToggle />
             <button
@@ -134,7 +130,6 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Dropdown */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-black/[0.08] dark:border-white/[0.1] bg-white/95 dark:bg-[#161618]/95 backdrop-blur-xl px-4 py-4 space-y-3">
             <div className="pb-2 border-b border-black/[0.06] dark:border-white/[0.08]">
@@ -176,7 +171,6 @@ export function Navbar() {
         )}
       </header>
 
-      {/* Global Search Modal */}
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );

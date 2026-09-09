@@ -163,7 +163,6 @@ export function SpfDmarcTool() {
 
       {data && (
         <div className="space-y-6">
-          {/* SPF Card */}
           <ResultCard title={`Sender Policy Framework (SPF): ${data.domain}`}>
             {data.spfRecord ? (
               <div className="space-y-3.5">
@@ -189,7 +188,6 @@ export function SpfDmarcTool() {
             )}
           </ResultCard>
 
-          {/* DMARC Card */}
           <ResultCard title={`DMARC Policy: _dmarc.${data.domain}`}>
             {data.dmarcRecord ? (
               <div className="space-y-3.5">
