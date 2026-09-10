@@ -2,7 +2,15 @@
 
 A modern, fast, and practical developer utility platform featuring 35+ real network, domain, web, security, geolocation, phone, and developer tools.
 
-Built with Next.js 14 App Router, TypeScript, and Tailwind CSS. Designed to be clean, responsive, and deployable straight to Vercel with zero configuration.
+Built with Next.js 14 App Router, TypeScript, and Tailwind CSS. Designed to be ultra-clean, high-performance, fully responsive, and deployable straight to Vercel with zero configuration.
+
+---
+
+## ✨ Features & Design System
+- **Precision Modern UI**: High-contrast, clean typography, smooth glassmorphic panels, and intuitive keyboard navigation.
+- **Instant Command Palette**: Fast Cmd+K / Ctrl+K search across all 35+ diagnostic utilities and developer protocols.
+- **Dark & Light Modes**: First-class system theme synchronization with tailored contrast ratios.
+- **Privacy First**: Zero trackers, zero ads, direct client & edge execution.
 
 ---
 
