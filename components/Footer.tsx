@@ -120,7 +120,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto pt-6 border-t border-black/[0.06] dark:border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#86868b] dark:text-[#a1a1a6]">
         <div>
-          &copy; {new Date().getFullYear()} WTOOLS &bull; Engineered like macOS with precision and care.
+          &copy; {new Date().getFullYear()} WTOOLS &bull; Engineered with precision, speed, and care.
         </div>
         <div>
           Crafted for engineers, developers, and system administrators.
