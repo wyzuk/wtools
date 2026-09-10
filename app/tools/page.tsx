@@ -120,8 +120,8 @@ function ToolsContent() {
       </div>
 
       {filteredTools.length === 0 ? (
-        <div className="py-16 text-center bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-3xl shadow-macos">
-          <SlidersHorizontal className="w-8 h-8 text-slate-400 mx-auto mb-3" />
+        <div className="py-16 text-center bg-white dark:bg-[#1c1c1e] border border-black/[0.08] dark:border-white/[0.1] rounded-3xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_-4px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+          <SlidersHorizontal className="w-8 h-8 text-[#0071e3] mx-auto mb-3 opacity-80" />
           <h3 className="text-base font-bold text-[#1d1d1f] dark:text-white">No utilities matched your criteria</h3>
           <p className="text-sm text-[#86868b] dark:text-[#a1a1a6] mt-1 max-w-sm mx-auto">
             Try adjusting your search terms or selecting a different category.
@@ -131,7 +131,7 @@ function ToolsContent() {
               setSearchQuery("");
               setActiveCategory("all");
             }}
-            className="mt-4 px-4 py-2 text-xs font-semibold rounded-xl bg-white dark:bg-neutral-800 border border-black/[0.1] text-[#0071e3] hover:bg-slate-50 transition-all shadow-sm"
+            className="mt-4 px-5 py-2 text-xs font-semibold rounded-xl bg-[#0071e3] text-white hover:bg-[#0077ed] active:scale-95 transition-all shadow-[0_2px_8px_rgba(0,113,227,0.3)]"
           >
             Reset Filters
           </button>
