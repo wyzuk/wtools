@@ -56,7 +56,7 @@ export function Navbar() {
                   WTOOLS
                 </span>
                 <span className="hidden sm:inline-block text-[10px] font-semibold uppercase px-2 py-0.5 rounded-full bg-blue-500/10 text-[#0071e3] dark:text-[#2997ff] border border-[#0071e3]/20 tracking-wider">
-                  macOS
+                  Developer Suite
                 </span>
               </div>
             </Link>
@@ -69,7 +69,7 @@ export function Navbar() {
           >
             <span className="flex items-center gap-2.5">
               <Search className="w-3.5 h-3.5 text-[#0071e3]" />
-              <span className="font-medium text-slate-600 dark:text-neutral-300">Spotlight search utilities...</span>
+              <span className="font-medium text-slate-600 dark:text-neutral-300">Search developer utilities...</span>
             </span>
             <span className="flex items-center gap-1.5">
               <kbd className="font-mono text-[11px] font-semibold bg-white dark:bg-neutral-700 px-1.5 py-0.5 rounded-md text-slate-600 dark:text-neutral-200 border border-black/[0.1] dark:border-white/[0.15] shadow-sm">
