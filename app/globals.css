@@ -43,7 +43,7 @@
   color: #ffffff;
 }
 
-/* macOS Smooth Scrollbars */
+/* Custom Smooth Scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -75,7 +75,7 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
-/* Apple-style Form Controls */
+/* Form Controls & Focus States */
 input:focus,
 select:focus,
 textarea:focus {
@@ -93,34 +93,38 @@ button:focus-visible {
   box-shadow: 0 0 0 2px #1c1c1e, 0 0 0 4px #2997ff !important;
 }
 
-/* macOS Glass & Window Effects */
-.macos-glass {
+/* Glassmorphism & Window Effects */
+.macos-glass,
+.glass-panel {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
-.dark .macos-glass {
+.dark .macos-glass,
+.dark .glass-panel {
   background-color: rgba(28, 28, 30, 0.85);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
-.macos-panel {
+.macos-panel,
+.ui-panel {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px -4px rgba(0, 0, 0, 0.06);
 }
 
-.dark .macos-panel {
+.dark .macos-panel,
+.dark .ui-panel {
   background-color: #1c1c1e;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* macOS Interactive Form Elements */
+/* Interactive Form Elements */
 input[type="text"],
 input[type="number"],
 input[type="password"],
@@ -155,7 +159,7 @@ textarea::placeholder {
   color: #6e6e73;
 }
 
-/* macOS Push Buttons */
+/* Push Buttons & Interactions */
 button {
   letter-spacing: -0.01em;
 }
@@ -173,8 +177,9 @@ strong, b {
   color: #ffffff;
 }
 
-/* macOS Pill Badges */
-.macos-pill {
+/* Pill Badges */
+.macos-pill,
+.ui-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
@@ -187,7 +192,8 @@ strong, b {
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.dark .macos-pill {
+.dark .macos-pill,
+.dark .ui-pill {
   background-color: rgba(255, 255, 255, 0.08);
   color: #a1a1a6;
   border: 1px solid rgba(255, 255, 255, 0.1);
