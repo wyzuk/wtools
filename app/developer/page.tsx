@@ -32,7 +32,7 @@ export default function DeveloperPage() {
               System Profile &bull; Developer Identity
             </span>
           </div>
-          <span className="text-xs font-mono text-[#0071e3] dark:text-[#2997ff]">macOS Sonoma Edition</span>
+          <span className="text-xs font-mono text-[#0071e3] dark:text-[#2997ff]">Developer Pro Edition</span>
         </div>
 
         <div className="p-6 sm:p-8 space-y-6">
@@ -71,7 +71,7 @@ export default function DeveloperPage() {
               without wrestling with bloated ad-ridden websites, intrusive tracking scripts, or paywalls.
             </p>
             <p>
-              WTOOLS is designed with the refinement, cleanliness, and instant responsiveness of a native macOS application &mdash; providing high-contrast, easy-to-read diagnostic outputs for engineers and curious technologists alike.
+              WTOOLS is designed with the refinement, cleanliness, and instant responsiveness of a high-performance desktop application &mdash; providing high-contrast, easy-to-read diagnostic outputs for engineers and curious technologists alike.
             </p>
           </div>
 
