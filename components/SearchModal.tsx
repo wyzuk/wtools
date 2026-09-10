@@ -77,7 +77,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           <div className="flex items-center gap-3">
             <MacTrafficLights size="xs" />
             <span className="text-xs font-semibold text-[#86868b] dark:text-[#a1a1a6]">
-              Spotlight Search
+              Quick Command Palette
             </span>
           </div>
           <kbd className="px-2 py-0.5 text-[11px] font-mono text-[#86868b] dark:text-[#a1a1a6] bg-black/[0.05] dark:bg-white/[0.08] border border-black/[0.06] dark:border-white/[0.08] rounded-md">
