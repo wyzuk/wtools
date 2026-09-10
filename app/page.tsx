@@ -44,7 +44,7 @@ export default function HomePage() {
           <div className="flex items-center gap-2 text-xs text-[#86868b] dark:text-[#a1a1a6]">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold border border-emerald-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              macOS Primary White Mode
+              High-Performance Suite Active
             </span>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function HomePage() {
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1d1d1f] dark:text-white tracking-tight leading-[1.08]">
                 Precision Developer <br className="hidden sm:inline" />
-                <span className="text-[#0071e3] dark:text-[#2997ff]">Tools for macOS</span>
+                <span className="text-[#0071e3] dark:text-[#2997ff]">Tools &amp; Diagnostics</span>
               </h1>
               <p className="text-base sm:text-lg text-[#515154] dark:text-[#a1a1a6] leading-relaxed">
                 Fast, focused diagnostic utilities for network engineers, security auditors, and software developers. Direct execution, crystal-clear readability, zero ads.
@@ -91,7 +91,7 @@ export default function HomePage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Spotlight search (e.g. IP, DNS, WHOIS, SSL, Hash, Port, Subnet, JWT, Base64)..."
+                placeholder="Instant search (e.g. IP, DNS, WHOIS, SSL, Hash, Port, Subnet, JWT, Base64)..."
                 className="w-full bg-[#f5f5f7] dark:bg-neutral-800/80 border border-black/[0.08] dark:border-white/[0.1] rounded-2xl pl-12 sm:pl-14 pr-12 py-4 text-base sm:text-lg text-[#1d1d1f] dark:text-white placeholder-[#86868b] dark:placeholder-[#a1a1a6] focus:bg-white dark:focus:bg-neutral-800 focus:border-[#0071e3] shadow-inner transition-all"
               />
               {searchQuery ? (
